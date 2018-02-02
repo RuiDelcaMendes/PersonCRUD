@@ -1,0 +1,21 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="PersonOData">
+            <EntityType Name="Person">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Age" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="36"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="255"/>
+            </EntityType>
+            <EntityContainer Name="PersonODataContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Persons" EntityType="PersonOData.Person"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

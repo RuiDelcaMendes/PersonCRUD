@@ -1,0 +1,68 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.watt.common.builder.sapui5clientbuild",
+    "com.sap.webide.hybrid.cordova"
+  ],
+  "build": {
+    "targetFolder": "dist",
+    "sourceFolder": "webapp",
+    "excludedFolders": [
+      "test"
+    ],
+    "excludedFiles": [
+      "test.html"
+    ],
+    "buildRequired": true
+  },
+  "generation": [
+    {
+      "templateId": "ui5template.2masterdetailcrud",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Fri, 02 Feb 2018 15:15:05 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "mockpreview": {
+    "mockUri": "/PersonOdataSVC/PersonListServlet.svc/",
+    "metadataFilePath": "localService/metadata.xml",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "basevalidator": {
+    "services": {
+      "xml": "fioriXmlAnalysis",
+      "js": "fioriJsValidator"
+    }
+  },
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": false,
+    "blockPushLevel": "Error"
+  },
+  "hybrid": {
+    "backendDestination": "PersonODataSVC",
+    "hatVersion": "1.28.8",
+    "appNamespace": "personNS",
+    "oDataConfigs": [
+      {
+        "hybridOdata": {
+          "name": "mainService",
+          "serviceUrl": ""
+        },
+        "originOdata": {
+          "name": "mainService",
+          "serviceUrl": "/PersonOdataSVC/PersonListServlet.svc/"
+        }
+      }
+    ]
+  }
+}
